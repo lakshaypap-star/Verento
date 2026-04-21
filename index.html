@@ -340,19 +340,96 @@ footer{background:var(--navy);border-top:4px solid var(--red);padding:5rem 5% 2r
   <a href="https://instagram.com/studyabroadmedicine" target="_blank">📸 @studyabroadmedicine</a>
 </div>
 
+<!-- MOBILE MENU OVERLAY -->
+<div id="mobileMenu" style="position:fixed;inset:0;background:var(--navy);z-index:2000;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column">
+  <!-- Menu Header -->
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:1.5rem 1.5rem 1rem;border-bottom:1px solid rgba(255,255,255,.08)">
+    <span style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--white)">Ver<span style="color:var(--red)">ento</span></span>
+    <button onclick="closeMenu()" style="background:rgba(255,255,255,.08);border:none;color:var(--white);width:40px;height:40px;border-radius:50%;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center">✕</button>
+  </div>
+
+  <!-- Menu Links -->
+  <div style="flex:1;padding:1.5rem">
+    <a href="#home" onclick="closeMenu()" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1rem;color:var(--white);text-decoration:none;border-radius:8px;margin-bottom:.4rem;transition:background .2s;font-size:1rem;font-weight:500" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='transparent'">
+      <span style="font-size:1.3rem">🏠</span> Home
+    </a>
+    <a href="#about" onclick="closeMenu()" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1rem;color:var(--white);text-decoration:none;border-radius:8px;margin-bottom:.4rem;transition:background .2s;font-size:1rem;font-weight:500" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='transparent'">
+      <span style="font-size:1.3rem">📖</span> About Us
+    </a>
+
+    <!-- MBBS - Highlighted -->
+    <a href="#mbbs" onclick="closeMenu()" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1rem;color:var(--white);text-decoration:none;border-radius:8px;margin-bottom:.4rem;background:rgba(192,39,45,.2);border:1px solid rgba(192,39,45,.4)">
+      <span style="font-size:1.3rem">🔥</span>
+      <div>
+        <div style="font-size:1rem;font-weight:700;color:var(--red)">MBBS Abroad 2026</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.1rem">Russia · Georgia · Philippines · Kazakhstan</div>
+      </div>
+      <span style="margin-left:auto;background:var(--red);color:var(--white);font-size:.6rem;padding:.2rem .5rem;border-radius:100px;font-weight:700">HOT</span>
+    </a>
+
+    <!-- Global Programs Dropdown -->
+    <div style="margin-bottom:.4rem">
+      <button onclick="toggleDrop()" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1rem;color:var(--white);background:transparent;border:none;width:100%;text-align:left;border-radius:8px;cursor:pointer;font-size:1rem;font-weight:500;font-family:'Outfit',sans-serif" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='transparent'">
+        <span style="font-size:1.3rem">🎓</span> Other Global Programs
+        <span id="dropArrow" style="margin-left:auto;transition:transform .3s">▾</span>
+      </button>
+      <div id="dropMenu" style="display:none;background:rgba(255,255,255,.04);border-radius:8px;margin-top:.3rem;overflow:hidden">
+        <a href="#courses" onclick="closeMenu()" style="display:flex;align-items:center;gap:.8rem;padding:.9rem 1.5rem;color:rgba(255,255,255,.75);text-decoration:none;font-size:.88rem;border-bottom:1px solid rgba(255,255,255,.05)">⚙️ Engineering & Technology</a>
+        <a href="#courses" onclick="closeMenu()" style="display:flex;align-items:center;gap:.8rem;padding:.9rem 1.5rem;color:rgba(255,255,255,.75);text-decoration:none;font-size:.88rem;border-bottom:1px solid rgba(255,255,255,.05)">💼 MBA & Management</a>
+        <a href="#courses" onclick="closeMenu()" style="display:flex;align-items:center;gap:.8rem;padding:.9rem 1.5rem;color:rgba(255,255,255,.75);text-decoration:none;font-size:.88rem;border-bottom:1px solid rgba(255,255,255,.05)">🏥 Medical & Nursing</a>
+        <a href="#courses" onclick="closeMenu()" style="display:flex;align-items:center;gap:.8rem;padding:.9rem 1.5rem;color:rgba(255,255,255,.75);text-decoration:none;font-size:.88rem;border-bottom:1px solid rgba(255,255,255,.05)">⚖️ Law & Psychology</a>
+        <a href="#courses" onclick="closeMenu()" style="display:flex;align-items:center;gap:.8rem;padding:.9rem 1.5rem;color:var(--gold);text-decoration:none;font-size:.85rem;font-weight:600">🌟 View All 1,500+ Programs →</a>
+      </div>
+    </div>
+
+    <a href="#destinations" onclick="closeMenu()" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1rem;color:var(--white);text-decoration:none;border-radius:8px;margin-bottom:.4rem;transition:background .2s;font-size:1rem;font-weight:500" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='transparent'">
+      <span style="font-size:1.3rem">🌍</span>
+      <div>
+        <div>Destinations</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.1rem">100+ Countries</div>
+      </div>
+    </a>
+
+    <a href="#fees" onclick="closeMenu()" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1rem;color:var(--white);text-decoration:none;border-radius:8px;margin-bottom:.4rem;background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.2)">
+      <span style="font-size:1.3rem">💰</span>
+      <div>
+        <div style="font-weight:600;color:var(--gold)">Fee Structure</div>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.1rem">Transparent pricing · No hidden fees</div>
+      </div>
+    </a>
+
+    <a href="#apply" onclick="closeMenu()" style="display:flex;align-items:center;gap:1rem;padding:1.1rem 1rem;color:var(--white);text-decoration:none;border-radius:8px;margin-bottom:.4rem;transition:background .2s;font-size:1rem;font-weight:500" onmouseover="this.style.background='rgba(255,255,255,.06)'" onmouseout="this.style.background='transparent'">
+      <span style="font-size:1.3rem">📞</span> Contact Us
+    </a>
+  </div>
+
+  <!-- Menu CTA Bottom -->
+  <div style="padding:1.5rem;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:.8rem">
+    <a href="#apply" onclick="closeMenu()" style="background:var(--red);color:var(--white);padding:1rem;text-align:center;text-decoration:none;border-radius:6px;font-weight:700;font-size:.9rem;letter-spacing:.08em">🚀 Apply Now — Free Counselling</a>
+    <a href="https://wa.me/919319566533?text=Hi%20Verento!%20I%20want%20to%20know%20more%20about%20studying%20abroad." target="_blank" style="background:#25D366;color:var(--white);padding:.9rem;text-align:center;text-decoration:none;border-radius:6px;font-weight:600;font-size:.88rem;display:flex;align-items:center;justify-content:center;gap:.5rem">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="18" height="18" fill="white"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.833.738 5.494 2.031 7.806L0 32l8.418-2.004A15.93 15.93 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.28 13.28 0 01-6.784-1.854l-.486-.29-5.001 1.191 1.27-4.858-.317-.5A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.307-9.907c-.4-.2-2.365-1.167-2.732-1.3-.367-.133-.634-.2-.9.2-.267.4-1.033 1.3-1.267 1.567-.233.267-.467.3-.867.1-.4-.2-1.688-.623-3.215-1.983-1.188-1.06-1.99-2.369-2.223-2.769-.233-.4-.025-.616.175-.815.18-.18.4-.467.6-.7.2-.233.267-.4.4-.667.133-.267.067-.5-.033-.7-.1-.2-.9-2.167-1.233-2.967-.325-.78-.655-.674-.9-.686l-.767-.013c-.267 0-.7.1-1.067.5s-1.4 1.367-1.4 3.333 1.433 3.867 1.633 4.133c.2.267 2.82 4.307 6.833 6.034.955.412 1.7.658 2.28.842.958.305 1.83.262 2.52.159.769-.114 2.365-.967 2.699-1.9.333-.933.333-1.733.233-1.9-.1-.167-.367-.267-.767-.467z"/></svg>
+      WhatsApp Us Now
+    </a>
+    <div style="display:flex;justify-content:center;gap:1.5rem;margin-top:.3rem">
+      <a href="tel:+919319566533" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.78rem">📞 +91 93195 66533</a>
+      <a href="mailto:lakshay@verento.co.in" style="color:rgba(255,255,255,.5);text-decoration:none;font-size:.78rem">✉️ Email Us</a>
+    </div>
+  </div>
+</div>
+
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nav-logo">Ver<span>ento</span></a>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#mbbs" style="color:var(--red);font-weight:700">MBBS 2026</a></li>
     <li><a href="#courses">Courses</a></li>
     <li><a href="#destinations">Destinations</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#testimonials">Stories</a></li>
-    <li><a href="#apply">Apply</a></li>
+    <li><a href="#fees">Fees</a></li>
+    <li><a href="#apply">Contact</a></li>
   </ul>
   <a href="#apply" class="nav-cta">Apply Now</a>
-  <div class="hamburger"><span></span><span></span><span></span></div>
+  <div class="hamburger" id="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
 </nav>
 
 <!-- HERO -->
@@ -389,7 +466,125 @@ footer{background:var(--navy);border-top:4px solid var(--red);padding:5rem 5% 2r
   </div>
 </div>
 
-<!-- SERVICES -->
+<!-- ABOUT US -->
+<section id="about" style="background:var(--white);padding:7rem 5%">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1100px;margin:0 auto" class="reveal">
+    <div>
+      <div class="s-eye"><div class="s-line"></div><span class="s-tag">Our Story</span></div>
+      <h2 class="s-title">A Commitment to<br><em style="font-style:italic;color:var(--red)">Integrity</em> in Global Education</h2>
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:1.5rem;font-size:.92rem">At <strong>Kings Educational Solution</strong> (Powered by Verento Consulting), we are more than just consultants. We are a collective of <strong>Entrepreneurs, Philanthropists, and Doctors</strong> who came together with one mission: to redefine international education through transparency and trust.</p>
+      <div style="background:rgba(192,39,45,.05);border-left:4px solid var(--red);padding:1.2rem 1.5rem;border-radius:0 8px 8px 0;margin-bottom:1.5rem">
+        <p style="color:var(--navy);font-weight:700;font-size:.95rem;margin-bottom:.3rem">🎯 Our Mission: Zero Deception</p>
+        <p style="color:var(--muted);font-size:.85rem;line-height:1.6">Too many students fall victim to unethical practices. We ensure no student is ever cheated in the name of "Study Abroad" opportunities.</p>
+      </div>
+      <a href="#apply" class="btn-red" style="display:inline-block">Talk to Our Team →</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1.2rem">
+      <div style="background:var(--offwhite);border:1px solid var(--border);border-radius:8px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start">
+        <span style="font-size:1.8rem;flex-shrink:0">✈️</span>
+        <div><h4 style="color:var(--navy);font-size:.95rem;margin-bottom:.3rem">Airport to University</h4><p style="color:var(--muted);font-size:.82rem;line-height:1.6">Our responsibility begins the moment you land. We manage your transition until you are comfortably settled.</p></div>
+      </div>
+      <div style="background:var(--offwhite);border:1px solid var(--border);border-radius:8px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start">
+        <span style="font-size:1.8rem;flex-shrink:0">📚</span>
+        <div><h4 style="color:var(--navy);font-size:.95rem;margin-bottom:.3rem">Academic Longevity</h4><p style="color:var(--muted);font-size:.82rem;line-height:1.6">We support you throughout the entire duration of your studies. You are never alone in a foreign land.</p></div>
+      </div>
+      <div style="background:var(--offwhite);border:1px solid var(--border);border-radius:8px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start">
+        <span style="font-size:1.8rem;flex-shrink:0">💼</span>
+        <div><h4 style="color:var(--navy);font-size:.95rem;margin-bottom:.3rem">Career & Beyond</h4><p style="color:var(--muted);font-size:.82rem;line-height:1.6">Job placements and Work Visa assistance until your professional career is firmly established.</p></div>
+      </div>
+      <div style="background:var(--offwhite);border:1px solid var(--border);border-radius:8px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start">
+        <span style="font-size:1.8rem;flex-shrink:0">💰</span>
+        <div><h4 style="color:var(--navy);font-size:.95rem;margin-bottom:.3rem">Financial Empowerment</h4><p style="color:var(--muted);font-size:.82rem;line-height:1.6">Education loans, government subsidies & scholarships — we make your dream financially achievable.</p></div>
+      </div>
+    </div>
+  </div>
+  <!-- Stats bar -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:4rem;max-width:1100px;margin-left:auto;margin-right:auto" class="reveal">
+    <div style="background:var(--navy);padding:2rem;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:var(--gold)">1,500+</div><div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.3rem">Global Programs</div></div>
+    <div style="background:var(--navy);padding:2rem;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:var(--red)">100+</div><div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.3rem">Countries</div></div>
+    <div style="background:var(--navy);padding:2rem;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:var(--gold)">500+</div><div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.3rem">Students Placed</div></div>
+    <div style="background:var(--navy);padding:2rem;text-align:center"><div style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:var(--red)">Zero</div><div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.3rem">Deception Policy</div></div>
+  </div>
+</section>
+
+<!-- MBBS ABROAD -->
+<section id="mbbs" style="background:linear-gradient(135deg,var(--navy),var(--navy3));padding:7rem 5%">
+  <div style="text-align:center;margin-bottom:3.5rem" class="reveal">
+    <div class="s-eye" style="justify-content:center"><div class="s-line" style="background:var(--red)"></div><span class="s-tag" style="color:var(--red)">🔥 Most Popular</span></div>
+    <h2 class="s-title" style="color:var(--white)">MBBS Abroad 2026</h2>
+    <p class="s-sub" style="margin:0 auto;color:rgba(255,255,255,.6)">Become a Doctor without breaking the bank. Top NMC-approved universities. Low fees. High quality education.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;margin-bottom:3rem" class="reveal">
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:2rem;transition:all .3s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+      <div style="font-size:2rem;margin-bottom:.8rem">🇷🇺</div>
+      <h3 style="font-family:'Playfair Display',serif;color:var(--white);font-size:1.2rem;margin-bottom:.5rem">Russia</h3>
+      <p style="color:rgba(255,255,255,.5);font-size:.82rem;line-height:1.6">World's top medical universities. 6-year MBBS. NMC approved. Fees from ₹15-25 Lakhs total.</p>
+      <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap"><span style="background:rgba(192,39,45,.3);color:#ff8a8a;font-size:.65rem;padding:.2rem .6rem;border-radius:100px">NMC Approved</span><span style="background:rgba(212,168,67,.2);color:var(--gold);font-size:.65rem;padding:.2rem .6rem;border-radius:100px">Most Popular</span></div>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:2rem;transition:all .3s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+      <div style="font-size:2rem;margin-bottom:.8rem">🇬🇪</div>
+      <h3 style="font-family:'Playfair Display',serif;color:var(--white);font-size:1.2rem;margin-bottom:.5rem">Georgia</h3>
+      <p style="color:rgba(255,255,255,.5);font-size:.82rem;line-height:1.6">European standard education. English medium. Safe country. Fees from ₹18-28 Lakhs total.</p>
+      <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap"><span style="background:rgba(192,39,45,.3);color:#ff8a8a;font-size:.65rem;padding:.2rem .6rem;border-radius:100px">European Quality</span><span style="background:rgba(212,168,67,.2);color:var(--gold);font-size:.65rem;padding:.2rem .6rem;border-radius:100px">English Medium</span></div>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:2rem;transition:all .3s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+      <div style="font-size:2rem;margin-bottom:.8rem">🇵🇭</div>
+      <h3 style="font-family:'Playfair Display',serif;color:var(--white);font-size:1.2rem;margin-bottom:.5rem">Philippines</h3>
+      <p style="color:rgba(255,255,255,.5);font-size:.82rem;line-height:1.6">US-pattern medical education. English medium. Tropical climate. Fees from ₹20-30 Lakhs total.</p>
+      <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap"><span style="background:rgba(192,39,45,.3);color:#ff8a8a;font-size:.65rem;padding:.2rem .6rem;border-radius:100px">US Pattern</span><span style="background:rgba(212,168,67,.2);color:var(--gold);font-size:.65rem;padding:.2rem .6rem;border-radius:100px">English Medium</span></div>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:2rem;transition:all .3s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+      <div style="font-size:2rem;margin-bottom:.8rem">🇰🇿</div>
+      <h3 style="font-family:'Playfair Display',serif;color:var(--white);font-size:1.2rem;margin-bottom:.5rem">Kazakhstan</h3>
+      <p style="color:rgba(255,255,255,.5);font-size:.82rem;line-height:1.6">Most affordable MBBS abroad. Modern facilities. Indian food available. Fees from ₹12-20 Lakhs.</p>
+      <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap"><span style="background:rgba(192,39,45,.3);color:#ff8a8a;font-size:.65rem;padding:.2rem .6rem;border-radius:100px">Most Affordable</span><span style="background:rgba(212,168,67,.2);color:var(--gold);font-size:.65rem;padding:.2rem .6rem;border-radius:100px">Indian Food</span></div>
+    </div>
+  </div>
+  <div style="text-align:center" class="reveal">
+    <a href="#apply" class="btn-red" style="font-size:.95rem;padding:1.1rem 3rem">Get Free MBBS Counselling →</a>
+    <p style="color:rgba(255,255,255,.4);font-size:.78rem;margin-top:1rem">100% free. No obligation. Expert guidance in 24 hours.</p>
+  </div>
+</section>
+
+<!-- FEE STRUCTURE -->
+<section id="fees" style="background:var(--cream);padding:7rem 5%">
+  <div style="text-align:center;margin-bottom:3.5rem" class="reveal">
+    <div class="s-eye" style="justify-content:center"><div class="s-line"></div><span class="s-tag">Transparent Pricing</span></div>
+    <h2 class="s-title">Fee Structure</h2>
+    <p class="s-sub" style="margin:0 auto">No hidden fees. No surprises. Complete transparency — because you deserve to know exactly what you're paying for.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto" class="reveal">
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 4px 20px rgba(10,26,60,.06)">
+      <div style="background:var(--navy);padding:1.5rem;text-align:center"><div style="font-size:1.8rem;margin-bottom:.5rem">🏥</div><h3 style="font-family:'Playfair Display',serif;color:var(--white);font-size:1.2rem">MBBS Abroad</h3></div>
+      <div style="padding:1.5rem">
+        <div style="display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.85rem"><span style="color:var(--muted)">Russia (6 years)</span><span style="color:var(--navy);font-weight:600">₹15–25 Lakhs</span></div>
+        <div style="display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.85rem"><span style="color:var(--muted)">Georgia (6 years)</span><span style="color:var(--navy);font-weight:600">₹18–28 Lakhs</span></div>
+        <div style="display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.85rem"><span style="color:var(--muted)">Philippines (6 years)</span><span style="color:var(--navy);font-weight:600">₹20–30 Lakhs</span></div>
+        <div style="display:flex;justify-content:space-between;padding:.7rem 0;font-size:.85rem"><span style="color:var(--muted)">Kazakhstan (6 years)</span><span style="color:var(--navy);font-weight:600">₹12–20 Lakhs</span></div>
+        <a href="#apply" style="display:block;background:var(--red);color:var(--white);text-align:center;padding:.85rem;text-decoration:none;border-radius:4px;margin-top:1.2rem;font-size:.82rem;font-weight:700">Get Exact Fees →</a>
+      </div>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 4px 20px rgba(10,26,60,.06)">
+      <div style="background:var(--red);padding:1.5rem;text-align:center"><div style="font-size:1.8rem;margin-bottom:.5rem">🎓</div><h3 style="font-family:'Playfair Display',serif;color:var(--white);font-size:1.2rem">Study Abroad</h3></div>
+      <div style="padding:1.5rem">
+        <div style="display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.85rem"><span style="color:var(--muted)">UK (per year)</span><span style="color:var(--navy);font-weight:600">₹12–20 Lakhs</span></div>
+        <div style="display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.85rem"><span style="color:var(--muted)">Canada (per year)</span><span style="color:var(--navy);font-weight:600">₹8–15 Lakhs</span></div>
+        <div style="display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.85rem"><span style="color:var(--muted)">Germany (per year)</span><span style="color:var(--navy);font-weight:600">₹1–3 Lakhs</span></div>
+        <div style="display:flex;justify-content:space-between;padding:.7rem 0;font-size:.85rem"><span style="color:var(--muted)">Australia (per year)</span><span style="color:var(--navy);font-weight:600">₹10–18 Lakhs</span></div>
+        <a href="#apply" style="display:block;background:var(--navy);color:var(--white);text-align:center;padding:.85rem;text-decoration:none;border-radius:4px;margin-top:1.2rem;font-size:.82rem;font-weight:700">Get Exact Fees →</a>
+      </div>
+    </div>
+    <div style="background:var(--white);border:2px solid var(--gold);border-radius:8px;overflow:hidden;box-shadow:0 4px 20px rgba(212,168,67,.15)">
+      <div style="background:linear-gradient(135deg,var(--gold),#b8922e);padding:1.5rem;text-align:center"><div style="font-size:1.8rem;margin-bottom:.5rem">💰</div><h3 style="font-family:'Playfair Display',serif;color:var(--navy);font-size:1.2rem;font-weight:900">Financial Aid</h3></div>
+      <div style="padding:1.5rem">
+        <div style="display:flex;align-items:center;gap:.8rem;padding:.7rem 0;border-bottom:1px solid var(--border)"><span style="color:var(--gold);font-size:1rem">✓</span><div><div style="font-size:.85rem;font-weight:600;color:var(--navy)">Education Loans</div><div style="font-size:.75rem;color:var(--muted)">Low-interest loans, easy process</div></div></div>
+        <div style="display:flex;align-items:center;gap:.8rem;padding:.7rem 0;border-bottom:1px solid var(--border)"><span style="color:var(--gold);font-size:1rem">✓</span><div><div style="font-size:.85rem;font-weight:600;color:var(--navy)">Government Subsidies</div><div style="font-size:.75rem;color:var(--muted)">State-funded support programs</div></div></div>
+        <div style="display:flex;align-items:center;gap:.8rem;padding:.7rem 0"><span style="color:var(--gold);font-size:1rem">✓</span><div><div style="font-size:.85rem;font-weight:600;color:var(--navy)">Scholarships</div><div style="font-size:.75rem;color:var(--muted)">Merit-based awards worldwide</div></div></div>
+        <a href="#apply" style="display:block;background:linear-gradient(135deg,var(--gold),#b8922e);color:var(--navy);text-align:center;padding:.85rem;text-decoration:none;border-radius:4px;margin-top:1.2rem;font-size:.82rem;font-weight:800">Check My Eligibility →</a>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="services">
   <div class="srv-intro reveal">
     <div><div class="s-eye"><div class="s-line"></div><span class="s-tag">What We Offer</span></div><h2 class="s-title">World-Class<br>Services for You</h2></div>
@@ -654,6 +849,11 @@ footer{background:var(--navy);border-top:4px solid var(--red);padding:5rem 5% 2r
 </a>
 
 <script>
+// HAMBURGER MENU
+function openMenu(){document.getElementById('mobileMenu').style.transform='translateX(0)';document.body.style.overflow='hidden'}
+function closeMenu(){document.getElementById('mobileMenu').style.transform='translateX(100%)';document.body.style.overflow=''}
+function toggleDrop(){const d=document.getElementById('dropMenu'),a=document.getElementById('dropArrow');if(d.style.display==='none'){d.style.display='block';a.style.transform='rotate(180deg)'}else{d.style.display='none';a.style.transform='rotate(0)'}}
+
 // REVEAL
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:0.08});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
