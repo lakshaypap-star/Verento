@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Study Abroad Consultancy New Delhi | Verento Consulting | MBBS Abroad | Work Abroad | KES Kings Educational Solution</title>
 <meta name="description" content="Top study abroad consultancy in New Delhi — Verento Consulting Pvt Ltd (KES Kings Educational Solution). Study in UK, USA, Canada, Australia, Germany. MBBS abroad. Work abroad. Free counselling. 98% visa success. Call +91 93195 66533."/>
-<meta name="keywords" content="study abroad consultancy New Delhi, study abroad India, abroad study consultancy Delhi, overseas education consultants India, study in UK from India, study in Canada from India, study in Australia from India, study in Germany free, MBBS abroad India, MBBS Russia India, MBBS Philippines, work abroad India, work permit abroad India, overseas education Delhi, foreign education consultancy, best study abroad consultants Delhi, study abroad 2024 2025, visa consultancy New Delhi, student visa UK, student visa Canada, student visa Australia, education abroad consultants, KES Kings Educational Solution, Verento Consulting, study in USA from India, study in New Zealand, study in Ireland, study in Singapore, study in Japan, study in UAE, abroad education after 12th, abroad education after graduation, scholarship abroad India, IELTS coaching Delhi, foreign university admission, top universities abroad India students, affordable study abroad, study abroad without IELTS, work and study abroad, post study work visa, PR abroad India"/>
+<meta name="keywords" content="study abroad consultancy New Delhi, study abroad India, abroad study consultancy Delhi, overseas education consultants India, study in UK from India, study in Canada from India, study in Australia from India, study in Germany free, MBBS abroad India, BDS abroad India, nursing abroad India, B.Pharmacy abroad, MBA abroad India, BBA abroad India, engineering abroad India, AI data science abroad, cyber security abroad, law abroad India, psychology abroad, hotel management abroad, aeronautical engineering abroad, work abroad India, work permit abroad India, overseas education Delhi, foreign education consultancy, best study abroad consultants Delhi, study abroad 2025 2026, visa consultancy New Delhi, student visa UK, student visa Canada, student visa Australia, education abroad consultants, KES Kings Educational Solution, Verento Consulting, study in USA from India, study in New Zealand, study in Ireland, study in Singapore, study in Japan, abroad education after 12th, abroad education after graduation, scholarship abroad India, IELTS coaching Delhi, foreign university admission, top universities abroad India students, affordable study abroad, work and study abroad, post study work visa, PR abroad India, 1500 courses abroad India"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <meta name="author" content="Verento Consulting Pvt Ltd"/>
 <meta name="geo.region" content="IN-DL"/>
@@ -345,6 +345,7 @@ footer{background:var(--navy);border-top:4px solid var(--red);padding:5rem 5% 2r
   <a href="#" class="nav-logo">Ver<span>ento</span></a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#courses">Courses</a></li>
     <li><a href="#destinations">Destinations</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#testimonials">Stories</a></li>
@@ -403,6 +404,47 @@ footer{background:var(--navy);border-top:4px solid var(--red);padding:5rem 5% 2r
     <div class="srv-card"><div class="srv-num">06</div><span class="srv-icon">💰</span><h3 class="srv-title">Scholarship & Loans</h3><p class="srv-desc">We identify scholarships, grants, and financial aid to make international education accessible to all.</p></div>
   </div>
 </section>
+
+<!-- COURSE FINDER -->
+<section id="courses" style="background:var(--navy);padding:7rem 5%">
+  <div style="text-align:center;margin-bottom:3.5rem" class="reveal">
+    <div class="s-eye" style="justify-content:center"><div class="s-line" style="background:var(--gold)"></div><span class="s-tag" style="color:var(--gold)">1,500+ Programs</span></div>
+    <h2 class="s-title" style="color:var(--white)">Course Finder</h2>
+    <p class="s-sub" style="margin:0 auto;color:rgba(255,255,255,.6)">Kings Educational Solution (Powered by Verento Consulting) — your gateway to 1,500+ programs across the globe. From Engineering to Arts, we help you find the right fit.</p>
+  </div>
+
+  <!-- Category Filter -->
+  <div style="display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:2.5rem" class="reveal">
+    <button class="cf-btn active" onclick="filterCourse('all',this)">🌍 All Courses</button>
+    <button class="cf-btn" onclick="filterCourse('medical',this)">🏥 Medical</button>
+    <button class="cf-btn" onclick="filterCourse('engineering',this)">⚙️ Engineering</button>
+    <button class="cf-btn" onclick="filterCourse('management',this)">💼 Management</button>
+    <button class="cf-btn" onclick="filterCourse('creative',this)">🎨 Specialized</button>
+  </div>
+
+  <div id="courseGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem" class="reveal"></div>
+
+  <!-- CTA -->
+  <div style="text-align:center;margin-top:3rem;padding:3rem;background:linear-gradient(135deg,rgba(212,168,67,.12),rgba(192,39,45,.08));border:1px solid rgba(212,168,67,.2);border-radius:8px" class="reveal">
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--white);margin-bottom:.8rem">Can't find your course?</h3>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:1.5rem;font-size:.9rem">We have 1,500+ programs. Talk to our counsellor and we'll find the perfect course for you — <strong style="color:var(--gold)">absolutely free!</strong></p>
+    <a href="#apply" class="btn-red">Find My Course — Free →</a>
+  </div>
+</section>
+
+<style>
+.cf-btn{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.6);padding:.5rem 1.1rem;font-family:'Outfit',sans-serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s;border-radius:100px;font-weight:500}
+.cf-btn:hover,.cf-btn.active{background:var(--gold);border-color:var(--gold);color:var(--navy);font-weight:700}
+.course-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1.8rem;transition:all .3s;cursor:pointer;position:relative;overflow:hidden}
+.course-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--gold));transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.course-card:hover{background:rgba(255,255,255,.09);border-color:rgba(212,168,67,.3);transform:translateY(-4px)}
+.course-card:hover::before{transform:scaleX(1)}
+.course-icon{font-size:2.2rem;margin-bottom:.9rem;display:block}
+.course-cat{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.4rem;display:block}
+.course-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
+.course-desc{font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300}
+.course-tag{display:inline-block;background:rgba(192,39,45,.2);color:var(--red);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;margin-top:.7rem;font-weight:600}
+</style>
 
 <!-- DESTINATIONS -->
 <section id="destinations">
@@ -632,7 +674,36 @@ function fc(){const q=document.getElementById('cs').value.toLowerCase();const ba
 function pc(name){document.getElementById('apply').scrollIntoView({behavior:'smooth'});setTimeout(()=>{const f=document.getElementById('tc2');if(f){f.value=name;f.style.borderColor='var(--red)'}gs(4)},800)}
 rc(countries);
 
-// FORM
+// COURSE FINDER
+const courses=[
+  {icon:"🦷",cat:"Medical & Allied Sciences",name:"BDS — Dentistry",desc:"International dental programs for aspiring dentists. Top universities in UK, Australia & Malaysia.",tag:"High Demand",filter:"medical"},
+  {icon:"💉",cat:"Medical & Allied Sciences",name:"MBBS Abroad",desc:"Affordable medical degrees in Russia, Georgia, Philippines, Kazakhstan & more.",tag:"Top Pick",filter:"medical"},
+  {icon:"🩺",cat:"Medical & Allied Sciences",name:"B.Sc. Nursing",desc:"Global nursing certifications with high job demand in UK, Canada & Australia.",tag:"High Demand",filter:"medical"},
+  {icon:"💊",cat:"Medical & Allied Sciences",name:"B.Pharmacy / Pharm.D",desc:"Pharmaceutical research and clinical practice courses at top global universities.",tag:"Research",filter:"medical"},
+  {icon:"🐾",cat:"Medical & Allied Sciences",name:"Veterinary Medicine (DVM)",desc:"Top-tier programs for animal healthcare in UK, Australia & New Zealand.",tag:"Specialized",filter:"medical"},
+  {icon:"🤖",cat:"Engineering & Technology",name:"AI & Data Science",desc:"The most trending tech courses for 2026. B.Tech/M.Tech at world-class universities.",tag:"Trending 2026",filter:"engineering"},
+  {icon:"⚙️",cat:"Engineering & Technology",name:"Mechanical & Robotics",desc:"Advanced manufacturing and robotics labs at top engineering universities globally.",tag:"Future Tech",filter:"engineering"},
+  {icon:"🏗️",cat:"Engineering & Technology",name:"Civil & Structural Engineering",desc:"Global infrastructure and design degrees in UK, Germany, Australia & Canada.",tag:"Popular",filter:"engineering"},
+  {icon:"🔐",cat:"Engineering & Technology",name:"Cyber Security",desc:"Specialized programs for digital safety and networking — fastest growing field worldwide.",tag:"High Salary",filter:"engineering"},
+  {icon:"💻",cat:"Engineering & Technology",name:"IT & Computer Science",desc:"Software engineering, cloud computing, and full-stack development degrees abroad.",tag:"Top Pick",filter:"engineering"},
+  {icon:"🌐",cat:"Management & Business",name:"Global MBA",desc:"Business leadership programs in UK, USA, and Europe at top-ranked business schools.",tag:"Top Pick",filter:"management"},
+  {icon:"📱",cat:"Management & Business",name:"BBA Digital Marketing",desc:"Modern business strategies for the digital age — social media, SEO, and e-commerce.",tag:"Trending",filter:"management"},
+  {icon:"🏨",cat:"Management & Business",name:"Hospitality & Tourism",desc:"Professional training for the global hotel industry — Switzerland, Australia & UAE.",tag:"Popular",filter:"management"},
+  {icon:"🚢",cat:"Management & Business",name:"Supply Chain & Logistics",desc:"Essential for global trade and e-commerce. High demand worldwide.",tag:"High Demand",filter:"management"},
+  {icon:"💰",cat:"Management & Business",name:"Finance & Banking",desc:"CFA, banking, and financial management programs at leading global institutions.",tag:"High Salary",filter:"management"},
+  {icon:"✈️",cat:"Specialized & Creative",name:"Aeronautical Engineering",desc:"Pilot training, aviation management and aerospace engineering programs abroad.",tag:"Dream Career",filter:"creative"},
+  {icon:"⚖️",cat:"Specialized & Creative",name:"Law — LLB / LLM",desc:"International law and corporate legal studies in UK, USA and Canada.",tag:"Prestigious",filter:"creative"},
+  {icon:"🧠",cat:"Specialized & Creative",name:"Psychology & Behavioral Sciences",desc:"Clinical and industrial psychology programs at leading global universities.",tag:"Growing Field",filter:"creative"},
+  {icon:"🎨",cat:"Specialized & Creative",name:"Fine Arts & Design",desc:"Graphic design, fashion, and creative arts programs in Italy, UK and France.",tag:"Creative",filter:"creative"},
+  {icon:"🎬",cat:"Specialized & Creative",name:"Media & Film Studies",desc:"Journalism, filmmaking, and digital media courses at world-renowned institutions.",tag:"Creative",filter:"creative"},
+];
+function renderCourses(list){
+  const g=document.getElementById('courseGrid');
+  if(!g)return;
+  g.innerHTML=list.map(c=>`<div class="course-card" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})"><span class="course-icon">${c.icon}</span><span class="course-cat">${c.cat}</span><div class="course-name">${c.name}</div><div class="course-desc">${c.desc}</div><span class="course-tag">${c.tag}</span></div>`).join('');
+}
+function filterCourse(f,btn){document.querySelectorAll('.cf-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderCourses(f==='all'?courses:courses.filter(c=>c.filter===f))}
+renderCourses(courses);
 function gs(n){document.querySelectorAll('.fs').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById('s'+n).classList.add('active');document.querySelector('[data-s="'+n+'"]').classList.add('active');document.getElementById('apply').scrollIntoView({behavior:'smooth'})}
 function submitApp(e){
   e.preventDefault();
