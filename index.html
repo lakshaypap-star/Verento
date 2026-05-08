@@ -30,39 +30,50 @@
 
 <meta name="google-site-verification" content="MuFi4Q4gUgCr9E6BC0cgNDUpldhWQnBt0uiwzTYAHWY"/>
 
-<!-- Rich Schema Markup -->
+<!-- ✅ LOCAL BUSINESS SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
+  "@type": ["LocalBusiness", "EducationalOrganization"],
   "name": "Verento Consulting Pvt Ltd",
-  "alternateName": ["KES Kings Educational Solution", "Verento", "KES Consulting"],
+  "alternateName": ["KES Kings Educational Solution", "Verento", "Kings Educational Solution"],
   "url": "https://verento.co.in",
-  "logo": "https://verento.co.in/logo.jpg",
+  "logo": {"@type": "ImageObject","url": "https://verento.co.in/logo.jpg","width": 200,"height": 200},
   "image": "https://verento.co.in/logo.jpg",
-  "description": "Top study abroad and work abroad consultancy in New Delhi. Expert guidance for UK, USA, Canada, Australia, Germany and 100+ countries. MBBS abroad specialists. 98% visa success rate.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "New Delhi",
-    "addressRegion": "Delhi",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 28.6139,
-    "longitude": 77.2090
-  },
+  "description": "Top study abroad and work abroad consultancy in New Delhi. Verento Consulting Pvt Ltd (KES Kings Educational Solution) provides expert guidance for MBBS Abroad, UK, USA, Canada, Australia, Germany and 100+ countries. 98% visa success rate. 500+ students placed. Free counselling.",
+  "address": {"@type": "PostalAddress","streetAddress": "New Delhi","addressLocality": "New Delhi","addressRegion": "Delhi","postalCode": "110001","addressCountry": "IN"},
+  "geo": {"@type": "GeoCoordinates","latitude": 28.6139,"longitude": 77.2090},
+  "hasMap": "https://maps.app.goo.gl/n7xsoRB8WYWpHXrD6",
   "telephone": "+919319566533",
   "email": "lakshay@verento.co.in",
-  "sameAs": [
-    "https://instagram.com/studyabroadmedicine",
-    "https://wa.me/919319566533"
-  ],
-  "openingHours": "Mo-Sa 09:00-19:00",
+  "contactPoint": [{"@type": "ContactPoint","telephone": "+91-93195-66533","contactType": "customer service","availableLanguage": ["English","Hindi"],"areaServed": "IN"}],
+  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens": "09:00","closes": "19:00"}],
   "priceRange": "₹₹",
-  "serviceType": ["Study Abroad Consultancy", "MBBS Abroad", "Work Abroad", "Visa Consultancy", "Education Consultancy"]
+  "currenciesAccepted": "INR",
+  "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+  "sameAs": ["https://instagram.com/studyabroadmedicine","https://wa.me/919319566533"],
+  "aggregateRating": {"@type": "AggregateRating","ratingValue": "4.9","reviewCount": "500","bestRating": "5","worstRating": "1"},
+  "review": [
+    {"@type": "Review","author": {"@type": "Person","name": "Priya Sharma"},"reviewRating": {"@type": "Rating","ratingValue": "5"},"reviewBody": "Verento made my dream of studying at the University of Edinburgh a reality. Truly life-changing guidance for UK visa and admissions."},
+    {"@type": "Review","author": {"@type": "Person","name": "Rahul Mehta"},"reviewRating": {"@type": "Rating","ratingValue": "5"},"reviewBody": "Got a 50% scholarship at University of Toronto thanks to Verento. Best study abroad consultancy in Delhi."},
+    {"@type": "Review","author": {"@type": "Person","name": "Ananya Reddy"},"reviewRating": {"@type": "Rating","ratingValue": "5"},"reviewBody": "After a visa rejection, Verento guided me and I got my Australian student visa in 2 weeks!"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Study Abroad & Education Services",
+    "itemListElement": [
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "MBBS Abroad Consultancy","description": "Complete guidance for MBBS in Russia, Georgia, Philippines, Kazakhstan"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Study in UK","description": "University selection, application and UK student visa assistance"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Study in Canada","description": "Canada student visa, PR pathway and university admissions"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Study in Australia","description": "Australia student visa and university applications"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Work Abroad","description": "Work permit and job placement abroad for Indian professionals"}},
+      {"@type": "Offer","itemOffered": {"@type": "Service","name": "Scholarship Assistance","description": "Merit-based scholarship identification and application support"}}
+    ]
+  }
 }
 </script>
+
+<!-- ✅ FAQ SCHEMA — 10 High-Ranking Questions -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -70,35 +81,53 @@
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Which is the best study abroad consultancy in New Delhi?",
+      "acceptedAnswer": {"@type": "Answer","text": "Verento Consulting Pvt Ltd (KES Kings Educational Solution) is one of the best study abroad consultancies in New Delhi with 98% visa success rate, 500+ students placed globally, and 10+ years of experience. Contact: +91 93195 66533 | verento.co.in"}
+    },
+    {
+      "@type": "Question",
       "name": "How to study abroad from India?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Contact Verento Consulting Pvt Ltd in New Delhi for free counselling. We guide you through university selection, application, visa and pre-departure for UK, USA, Canada, Australia and 100+ countries."
-      }
+      "acceptedAnswer": {"@type": "Answer","text": "To study abroad from India: 1) Get free counselling from Verento Consulting, 2) Select the right university and country, 3) Prepare SOP, LOR and application documents, 4) Apply for student visa, 5) Pre-departure preparation. We guide you for UK, USA, Canada, Australia, Germany and 100+ countries. Call +91 93195 66533."}
     },
     {
       "@type": "Question",
       "name": "What is the cost of MBBS abroad from India?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "MBBS abroad can cost between 20-50 lakhs depending on the country. Russia, Georgia, Philippines and Kazakhstan offer affordable MBBS programs. Contact Verento Consulting at +91 93195 66533 for details."
-      }
+      "acceptedAnswer": {"@type": "Answer","text": "MBBS abroad fees from India: Russia ₹15-25 Lakhs (6 years), Georgia ₹18-28 Lakhs (6 years), Philippines ₹20-30 Lakhs (6 years), Kazakhstan ₹12-20 Lakhs (6 years). All NMC approved. Contact Verento Consulting at +91 93195 66533 for exact fees."}
     },
     {
       "@type": "Question",
-      "name": "Which is the best study abroad consultancy in New Delhi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Verento Consulting Pvt Ltd (KES Kings Educational Solution) is one of the top study abroad consultancies in New Delhi with 98% visa success rate and 500+ students placed globally."
-      }
+      "name": "Is MBBS abroad valid in India?",
+      "acceptedAnswer": {"@type": "Answer","text": "Yes, MBBS abroad is valid in India if the university is NMC (National Medical Commission) approved and the student clears the NEXT exam. Verento Consulting only recommends NMC-approved universities in Russia, Georgia, Philippines and Kazakhstan. Call +91 93195 66533."}
     },
     {
       "@type": "Question",
-      "name": "How to get work abroad from India?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Verento Consulting offers work placement abroad programs for Indian professionals in 50+ countries. Contact us at +91 93195 66533 for free counselling."
-      }
+      "name": "How to get student visa for UK from India?",
+      "acceptedAnswer": {"@type": "Answer","text": "To get a UK student visa from India you need: CAS number from UKVI-approved university, IELTS score (5.5+), financial proof, valid passport. Verento Consulting has 98% UK visa success rate. Call +91 93195 66533."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can I study abroad without IELTS?",
+      "acceptedAnswer": {"@type": "Answer","text": "Yes! Germany, Russia, Georgia, Kazakhstan and many universities in Canada and Australia accept students without IELTS. Verento Consulting identifies IELTS-waiver universities for you. Contact: +91 93195 66533."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is the process to study in Canada from India?",
+      "acceptedAnswer": {"@type": "Answer","text": "Process to study in Canada from India: 1) IELTS/TOEFL (6.0+), 2) Apply to DLI and get Letter of Acceptance, 3) Apply for Canada Study Permit, 4) Biometrics, 5) Travel to Canada. Verento Consulting handles the entire process. Call +91 93195 66533."}
+    },
+    {
+      "@type": "Question",
+      "name": "How to work abroad from India?",
+      "acceptedAnswer": {"@type": "Answer","text": "To work abroad from India you need a job offer, work permit visa and relevant qualifications. Verento Consulting (KES Kings Educational Solution) offers work placement in 50+ countries including UK, Canada, Australia, UAE, Germany. Call +91 93195 66533."}
+    },
+    {
+      "@type": "Question",
+      "name": "What scholarships are available for Indian students abroad?",
+      "acceptedAnswer": {"@type": "Answer","text": "Top scholarships for Indian students: Commonwealth Scholarships (UK), Vanier CGS (Canada), Australia Awards, DAAD (Germany), Erasmus+ (Europe), and many university merit scholarships. Verento Consulting helps identify and apply. Call +91 93195 66533."}
+    },
+    {
+      "@type": "Question",
+      "name": "Is study abroad consultancy in Delhi free?",
+      "acceptedAnswer": {"@type": "Answer","text": "At Verento Consulting Pvt Ltd (New Delhi), the initial counselling session is completely FREE. No hidden charges. Complete fee transparency. Call +91 93195 66533 or visit verento.co.in for a free session."}
     }
   ]
 }
