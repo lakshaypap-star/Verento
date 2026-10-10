@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/BrandLogo.tsx","./src/components/Footer.tsx","./src/components/InquiryForm.tsx","./src/components/Navbar.tsx","./src/components/ServicePage.tsx","./src/lib/icons.ts","./src/lib/supabase.ts","./src/pages/HomePage.tsx","./src/pages/UniversitiesPage.tsx","./vite.config.ts"],"version":"5.9.3"}
